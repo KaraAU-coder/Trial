@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="multilingual">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Medical Glossary 1.0 Search</title>
+    <style>
+        /* Add the CSS from previous example here */
+        .id-badge {
+            background: #0366d6;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .domain-tag {
+            background: #e1e4e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Medical Glossary 1.0</h1>
+        
+        <div class="search-tools">
+            <input type="text" id="searchInput" placeholder="Search terms...">
+            <select id="searchField">
+                <option value="all">All Fields</option>
+                <option value="EN Term">English</option>
+                <option value="ZH Term">Chinese</option>
+                <option value="FR Term">French</option>
+                <option value="Definition">Definition</option>
+            </select>
+            <button onclick="search()">Search</button>
+        </div>
+
+        <div class="advanced-filters">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            
+            <select id="domainFilter">
+                <option value="">All Domains</option>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <div id="resultsContainer"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
